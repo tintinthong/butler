@@ -1,19 +1,19 @@
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE TypeOperators   #-}
-{-# LANGUAGE DataKinds       #-}
+{-# LANGUAGE DataKinds     #-}
+{-# LANGUAGE TypeOperators #-}
 
 module Lib
     ( startApp
     , app
     ) where
 
-import Data.Aeson.TH
-import Network.Wai
-import Network.Wai.Handler.Warp
-import Servant
-import Butler.Types.User 
-import Butler.Types.Api
-import Data.Mock
+import           Butler.Controller.User
+import           Butler.Types.Api         (UserAPI)
+import           Butler.Types.User
+import           Data.Aeson.TH
+import           Data.Mock
+import           Network.Wai
+import           Network.Wai.Handler.Warp
+import           Servant
 
 startApp :: IO ()
 startApp = run 8080 app
@@ -21,8 +21,9 @@ startApp = run 8080 app
 app :: Application
 app = serve api server
 
-api :: Proxy API
+api :: Proxy UserAPI
 api = Proxy
 
-server :: Server API
-server = return users
+server :: Server UserAPI
+server = getUsers :<|>
+         getUser

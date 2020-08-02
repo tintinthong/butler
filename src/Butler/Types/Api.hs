@@ -4,12 +4,13 @@
 
 module Butler.Types.Api
   (
-    API
+    UserAPI
   ) where
 
 import Servant
 import Butler.Types.User
 
 
-type API = "users" :> Get '[JSON] [User]
-  
+type UserAPI = "users" :> Get '[JSON] [User]
+           :<|> "users" :> Capture "userId" Int :> Get '[JSON] User
+

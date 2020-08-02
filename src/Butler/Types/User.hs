@@ -4,6 +4,7 @@ module Butler.Types.User
   (
     User(User)
     , Name(Name)
+    , userId
   ) where
 
 import           Butler.Types.Player
@@ -16,11 +17,11 @@ data Name = Name
     deriving (Eq, Show)
 
 data User = User
-    { userId    :: Int
-    , userName  :: Name
-    , userAlias :: String
-    , userEmail :: String
-    , userPlayer    :: Maybe Player
+    { userId     :: Int
+    , userName   :: Name
+    , userAlias  :: String
+    , userEmail  :: String
+    , userPlayer :: Maybe Player
     }
     deriving (Eq, Show)
 

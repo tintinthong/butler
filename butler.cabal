@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: dc97e4f667c9ac4c9daf85bd69db42c40d23268ef6e6df94163003494d5a95f9
+-- hash: d53d28217c40ae251e0d646124685aa5d330265506cfc15b64d51bb97e53e3f7
 
 name:           butler
 version:        0.1.0.0
@@ -26,6 +26,7 @@ source-repository head
 
 library
   exposed-modules:
+      Butler.Controller.User
       Butler.Types.Api
       Butler.Types.Game
       Butler.Types.Player
