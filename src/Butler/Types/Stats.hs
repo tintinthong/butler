@@ -1,6 +1,4 @@
 {-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE DataKinds     #-}
-{-# LANGUAGE TypeOperators #-}
 
 module Butler.Types.Stats
   (
@@ -9,7 +7,6 @@ module Butler.Types.Stats
   ) where
 
 import Data.Aeson.TH
-import Data.Aeson
 
 data GenericStats = GenericStats
     {

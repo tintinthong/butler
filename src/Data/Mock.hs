@@ -10,6 +10,6 @@ import           Butler.Types.User
 -- users = ["justin","thong"]
 
 users :: [User]
-users = [ User 1 (Name "Justin" "Thong" ) "tintinthong" "tintinthong@gmail.com"
-        , User 2 (Name "Rachel" "Tan") "melodichamster" "melodichamster@gmail.com"
+users = [ User 1 (Name "Justin" "Thong" ) "tintinthong" "tintinthong@gmail.com" Nothing
+        , User 2 (Name "Rachel" "Tan") "melodichamster" "melodichamster@gmail.com" Nothing
         ]

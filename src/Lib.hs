@@ -7,7 +7,6 @@ module Lib
     , app
     ) where
 
-import Data.Aeson
 import Data.Aeson.TH
 import Network.Wai
 import Network.Wai.Handler.Warp

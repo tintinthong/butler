@@ -1,6 +1,6 @@
 # butler
 
-Backend server for basketball score-keeping application for my neighborhood community 
+Backend server for basketball score-keeping application for my neighborhood.
 
 ```
 stack build

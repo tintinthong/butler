@@ -1,6 +1,4 @@
-
-{-# LANGUAGE DataKinds     #-}
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE TemplateHaskell #-}
 
 module Butler.Types.Team
   (
@@ -8,9 +6,12 @@ module Butler.Types.Team
   ) where
 
 import Butler.Types.Stats
+import Data.Aeson.TH
 
 data Team = Team
     { teamId     :: Int
     , teamStats :: TeamStats
     }
     deriving (Eq, Show)
+
+$(deriveJSON defaultOptions ''Team)
