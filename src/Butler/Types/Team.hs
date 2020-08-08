@@ -2,14 +2,14 @@
 
 module Butler.Types.Team
   (
-    Team(Team)
+    Team(..)
   ) where
 
-import Butler.Types.Stats
-import Data.Aeson.TH
+import           Butler.Types.Stats (TeamStats (..))
+import           Data.Aeson.TH      (defaultOptions, deriveJSON)
 
 data Team = Team
-    { teamId     :: Int
+    { teamId    :: Int
     , teamStats :: TeamStats
     }
     deriving (Eq, Show)

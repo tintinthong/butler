@@ -2,35 +2,33 @@
 
 module Butler.Types.Stats
   (
-    PlayerStats(PlayerStats)
-    , TeamStats(TeamStats)
+    PlayerStats(..)
+    , TeamStats(..)
   ) where
 
-import Data.Aeson.TH
+import           Data.Aeson.TH (defaultOptions, deriveJSON)
 
 data GenericStats = GenericStats
-    {
-      points :: Int
+    { points   :: Int
     , rebounds :: Int
-    , assists :: Int
-    , steals :: Int
+    , assists  :: Int
+    , steals   :: Int
     }
     deriving (Eq, Show)
 
 data PlayerStats = PlayerStats
-    {
-      playerstatsgeneric :: GenericStats
+    { playerstatsgeneric :: GenericStats
     }
     deriving (Eq, Show)
 
 data TeamStats = TeamStats
-    {
-      teamstatsgeneric :: GenericStats
+    { teamstatsgeneric :: GenericStats
     }
     deriving (Eq, Show)
 
 
-data GameStates = Home | Away
+data GameStates = Home
+    | Away
 
 $(deriveJSON defaultOptions ''GenericStats)
 $(deriveJSON defaultOptions ''PlayerStats)

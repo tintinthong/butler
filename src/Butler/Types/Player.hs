@@ -2,16 +2,15 @@
 
 module Butler.Types.Player
   (
-    Player(Player)
+    Player(..)
   ) where
 
-import Data.Aeson.TH
-import Butler.Types.Team
-import Butler.Types.Stats
-import Butler.Types.Game
+import           Butler.Types.Game (Game (..))
+import           Butler.Types.Team (Team (..))
+import           Data.Aeson.TH     (defaultOptions, deriveJSON)
 
 data Player = Player
-    { playerId   :: Int
+    { playerId    :: Int
     , playerGames :: [Game]
     }
     deriving (Eq, Show)

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d53d28217c40ae251e0d646124685aa5d330265506cfc15b64d51bb97e53e3f7
+-- hash: fa63f600bd9d887174807ab80e9f783403729c994bbf2544e31b1c32e245bcfd
 
 name:           butler
 version:        0.1.0.0
@@ -42,6 +42,7 @@ library
   build-depends:
       aeson
     , base >=4.7 && <5
+    , persistent
     , servant-server
     , wai
     , warp
@@ -58,6 +59,7 @@ executable butler-exe
       aeson
     , base
     , butler
+    , persistent
     , servant-server
     , wai
     , warp
@@ -78,6 +80,7 @@ test-suite butler-test
     , hspec
     , hspec-wai
     , hspec-wai-json
+    , persistent
     , servant-server
     , wai
     , warp

@@ -2,13 +2,12 @@
 
 module Butler.Types.User
   (
-    User(User)
-    , Name(Name)
-    , userId
+    User(..)
+    , Name(..)
   ) where
 
-import           Butler.Types.Player
-import           Data.Aeson.TH
+import           Butler.Types.Player (Player)
+import           Data.Aeson.TH       (defaultOptions, deriveJSON)
 
 data Name = Name
     { firstName :: String

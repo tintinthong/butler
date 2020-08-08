@@ -1,14 +1,14 @@
 
-{-# LANGUAGE TypeOperators   #-}
-{-# LANGUAGE DataKinds       #-}
+{-# LANGUAGE DataKinds     #-}
+{-# LANGUAGE TypeOperators #-}
 
 module Butler.Types.Api
   (
     UserAPI
   ) where
 
-import Servant
-import Butler.Types.User
+import           Butler.Types.User (User (..))
+import           Servant           ((:<|>), (:>), Capture, Get, JSON (..))
 
 
 type UserAPI = "users" :> Get '[JSON] [User]

@@ -6,14 +6,11 @@ module Lib
     , app
     ) where
 
-import           Butler.Controller.User
+import           Butler.Controller.User   (getUser, getUsers)
 import           Butler.Types.Api         (UserAPI)
-import           Butler.Types.User
-import           Data.Aeson.TH
-import           Data.Mock
-import           Network.Wai
-import           Network.Wai.Handler.Warp
-import           Servant
+import           Network.Wai.Handler.Warp (run)
+import           Servant                  ((:<|>) (..), Application, Proxy (..),
+                                           Server (..), serve)
 
 startApp :: IO ()
 startApp = run 8080 app
