@@ -25,6 +25,8 @@ dependencies:
 - wai
 - warp
 - persistent
+- persistent-sqlite
+- persistent-template
 
 library:
   source-dirs: src
