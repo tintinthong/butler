@@ -1,3 +1,4 @@
+{-# LANGUAGE DerivingStrategies         #-}
 {-# LANGUAGE EmptyDataDecls             #-}
 {-# LANGUAGE FlexibleContexts           #-}
 {-# LANGUAGE GADTs                      #-}
@@ -5,12 +6,11 @@
 {-# LANGUAGE MultiParamTypeClasses      #-}
 {-# LANGUAGE OverloadedStrings          #-}
 {-# LANGUAGE QuasiQuotes                #-}
+{-# LANGUAGE StandaloneDeriving         #-}
 {-# LANGUAGE TemplateHaskell            #-}
 {-# LANGUAGE TypeFamilies               #-}
-{-# LANGUAGE DerivingStrategies #-}
-{-# LANGUAGE StandaloneDeriving #-}
-{-# LANGUAGE UndecidableInstances #-}
-import           Control.Monad.IO.Class (liftIO)
+{-# LANGUAGE UndecidableInstances       #-}
+import           Control.Monad.IO.Class  (liftIO)
 import           Database.Persist
 import           Database.Persist.Sqlite
 import           Database.Persist.TH

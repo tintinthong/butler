@@ -11,7 +11,7 @@ import           Data.Aeson.TH     (defaultOptions, deriveJSON)
 
 data Player = Player
     { playerId    :: Int
-    , playerGames :: [Game]
+    , playerGames :: Maybe [Game]
     }
     deriving (Eq, Show)
 
