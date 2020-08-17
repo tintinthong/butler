@@ -1,0 +1,24 @@
+
+User
+  name String
+  email String
+  UniqueEmail email
+  admin Bool
+  deriving Show
+
+Player
+  name String
+  alias String
+  deriving Show
+  
+Team
+  name String
+  deriving Show
+
+Team_Player
+  team TeamId
+  player PlayerId
+  
+
+
+
