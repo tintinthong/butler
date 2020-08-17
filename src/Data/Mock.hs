@@ -7,7 +7,7 @@ module Data.Mock
 import           Butler.Types.Player (Player (..))
 import           Butler.Types.Team   (Team (..))
 import           Butler.Types.User   (Name (..), User (..))
-import           Data.Random.Extras  (sample)
+-- import           Data.Random.Extras  (sample)
 
 users ::[User]
 users = [ User 1 (Name "Justin" "Thong" ) "tintinthong" "tintinthong@gmail.com" Nothing

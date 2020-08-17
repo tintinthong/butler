@@ -1,18 +1,18 @@
 
 User
-  name String
-  email String
+  name Text
+  email Text
   UniqueEmail email
   admin Bool
   deriving Show
 
 Player
-  name String
-  alias String
+  name Text
+  alias Text
   deriving Show
   
 Team
-  name String
+  name Text
   deriving Show
 
 Team_Player

@@ -10,11 +10,16 @@
 {-# LANGUAGE TemplateHaskell            #-}
 {-# LANGUAGE TypeFamilies               #-}
 {-# LANGUAGE UndecidableInstances       #-}
+
+module Database.Migrate where 
+
 import           Control.Monad.IO.Class  (liftIO)
+import           Data.Text
 import           Database.Persist
 import           Database.Persist.Quasi
 import           Database.Persist.Sqlite
 import           Database.Persist.TH
+
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] $(persistFileWith lowerCaseSettings "./Models.persistentmodels")
 

@@ -27,6 +27,7 @@ dependencies:
 - persistent
 - persistent-sqlite
 - persistent-template
+- text
 
 library:
   source-dirs: src

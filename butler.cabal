@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0e42a156138d09829a68b0010de76dc81d44a9fa605c3c23a4558fce79360b42
+-- hash: 2dac8bd05ba8770ba7b8bef332344c9ae1a955eb4960b984b2db8133aafca2c6
 
 name:           butler
 version:        0.1.0.0
@@ -47,6 +47,7 @@ library
     , persistent-sqlite
     , persistent-template
     , servant-server
+    , text
     , wai
     , warp
   default-language: Haskell2010
@@ -66,6 +67,7 @@ executable butler-exe
     , persistent-sqlite
     , persistent-template
     , servant-server
+    , text
     , wai
     , warp
   default-language: Haskell2010
@@ -89,6 +91,7 @@ test-suite butler-test
     , persistent-sqlite
     , persistent-template
     , servant-server
+    , text
     , wai
     , warp
   default-language: Haskell2010
